@@ -1,0 +1,47 @@
+AI-Assisted Development Prompt Sequence:
+Phase 1: Project Initialization & Design System
+Prompt 0: Project Scaffolding
+"I am building a full-stack Airbnb property details clone. Initialize a new Next.js project configured with Tailwind CSS, App Router, and ESLint in the current directory. Verify that the development server starts successfully."
+
+Prompt 1: Design System & Navigation Bar
+"I am building a pixel-perfect clone of an Airbnb property details page in Next.js using Tailwind CSS. Analyze the typography, exact hex colors, and container spacing from this reference URL: https://airbnb-clone-umber-two.vercel.app. Output the tailwind.config.js file with custom colors (such as #222222 for text and #717171 for secondary text), font weights, and layout breakpoints. Next, build a responsive header matching the reference, including the Airbnb logo, search pill ('Anywhere | Anytime | Add guests'), and user profile dropdown shell."
+
+Phase 2: Core Page Layout (Listing Details)
+Prompt 2: Hero Title & 5-Image Grid
+"Create the Hero section for the property details page based on the reference URL. Include the property title ('Romantic Jacuzzi 1BHK Candolim | Mirashya UG10'), share button, and save button. Below the title, implement a 5-image CSS Grid layout matching the reference: one large primary image on the left, and a 2x2 grid of smaller images on the right. Include the 'Show all photos' button positioned in the bottom right corner of the grid with its rounded border and icon. Assume all image paths are relative strings (e.g., /images/room-1.jpg)."
+
+Prompt 3: Two-Column Main Layout & Sticky Booking Card
+"Below the hero grid, construct a two-column layout. The left column (spanning approximately 65% width) will house the main property information. The right column must contain a sticky booking card showing night pricing, check-in/checkout date inputs, guest selector, and a 'Reserve' button. Ensure the sticky positioning (sticky top-24) allows the booking card to follow page scroll seamlessly, matching the reference behavior."
+
+Prompt 4: Property Details & Amenities
+"Focus on the left column. Add the property subtitle ('Entire serviced apartment in Candolim, India'), room/bed/bath metadata bar, and host avatar row. Below this, construct the Amenities grid featuring category icons and text labels. Ensure exact padding (py-6), divider lines (border-b border-gray-200), and subtle hover effects match the reference."
+
+Prompt 5: Interactive Two-Month Calendar
+"Build the 'Calendar' section directly below the amenities list based on the reference. Implement a two-month side-by-side calendar layout using CSS Grid. Format date headers, week days, available dates, and grayed-out/blocked dates. Include the 'Clear dates' button at the bottom right corner."
+
+Prompt 6: Reviews Section
+"Build the 'Reviews' section below the calendar. First, create the header displaying the aggregate score (e.g., 4.95) and total review count. Below it, construct the 6-category rating progress bar grid (Cleanliness, Accuracy, Communication, Location, Check-in, Value). Finally, create a 2-column grid displaying individual guest review cards with host response text and avatar alignment."
+
+Prompt 7: Map & Location Section
+"Build the 'Where you'll be' location block. Create a map container placeholder with the exact height, rounded corners, and border styling matching the reference. Below the map, add the location title and contextual neighborhood details."
+
+Prompt 8: Host Profile Section
+"Construct the 'Meet your host' section. Implement a two-column layout: the left column containing the Host profile summary card (profile image, Superhost badge, review count, rating), and the right column containing the host's extended biography, response rate statistics, and the 'Contact Host' button."
+
+Prompt 9: Policy Columns & Footer
+"Below the host profile, create the 'Things to know' section using a strict 3-column layout for 'House rules', 'Safety & property', and 'Cancellation policy'. Finally, build the global Footer with a light background (bg-[#f7f7f7]), breadcrumb links, category columns, language/currency selectors, and copyright bar."
+
+Phase 3: Overlays & Interactive Views
+Prompt 10: Overlay 1 - Full-Screen Photo Tour
+"Implement the 'Photo Tour' overlay view triggered by clicking 'Show all photos' or any hero image. The overlay must open full-screen with a white background. Create a top fixed navigation bar containing a back button, share icon, and save icon. Inside the body, implement the masonry/grid photo categories ('Living room 1', 'Bedroom', 'Full bathroom', etc.) as styled in the reference."
+
+Prompt 11: Overlay 2 - Interactive Lightbox & Keyboard Navigation
+"Implement the 'Lightbox' view, which opens when a user selects an individual image within the Photo Tour. Create a modal displaying a single centered photo, image index counter (e.g., '1 of 43'), close button, and left/right arrow navigation controls. Crucially, implement keyboard event listeners (ArrowRight, ArrowLeft, Escape) and focus trapping to guarantee accessibility and behavioral parity."
+
+Phase 4: Quality Assurance & Pixel-Perfect Audit
+Prompt 12: Visual & Parity Audit
+"Perform a final audit of all Next.js components against the reference URL: https://airbnb-clone-umber-two.vercel.app. Verify and fix:
+1. Padding and margin discrepancies across all section dividers (border-b).
+2. Exact hex colors for text (#222222), muted labels (#717171), and borders.
+3. Hover transitions on all clickable buttons, links, and card borders.
+4. Keyboard focus rings for interactive elements."
