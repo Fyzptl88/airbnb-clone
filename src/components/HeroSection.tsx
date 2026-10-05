@@ -1,19 +1,108 @@
 "use client";
 
 import { useState } from "react";
-import PhotoTour from "./PhotoTour";
-
-interface PropertyImage {
-  src: string;
-  alt: string;
-}
+import PhotoTour, { type PropertyImage } from "./PhotoTour";
 
 const images: PropertyImage[] = [
-  { src: "/images/room-1.png", alt: "Spacious living room with natural light" },
-  { src: "/images/room-2.png", alt: "Cozy bedroom with king-size bed" },
-  { src: "/images/room-3.png", alt: "Modern open kitchen" },
-  { src: "/images/room-4.png", alt: "Luxurious bathroom" },
-  { src: "/images/room-5.png", alt: "Exterior view with pool" },
+  {
+    src: "/images/room-1.png",
+    alt: "Spacious living room 1 with natural light and dining table",
+    category: "Living room 1",
+    amenities: ["Sofa", "Air conditioning", "Ceiling fan", "TV"],
+  },
+  {
+    src: "/images/living-room-2.jpg",
+    alt: "Living room 2 with stone wall, dining nook and private jacuzzi hot tub",
+    category: "Living room 2",
+    amenities: ["Ceiling fan", "Hot tub"],
+  },
+  {
+    src: "/images/room-3.png",
+    alt: "Full kitchen with wooden cabinets and countertop",
+    category: "Full kitchen",
+    amenities: [
+      "Freezer",
+      "Fridge",
+      "Blender",
+      "Cooker",
+      "Cooking basics",
+      "Kettle",
+      "Microwave",
+      "Toaster",
+      "Wine glasses",
+      "Coffee",
+      "Crockery and cutlery",
+    ],
+  },
+  {
+    src: "/images/kitchen-2.jpg",
+    alt: "Full kitchen dining area and gas stove cooktop",
+    category: "Full kitchen",
+    amenities: [
+      "Freezer",
+      "Fridge",
+      "Blender",
+      "Cooker",
+      "Cooking basics",
+      "Kettle",
+      "Microwave",
+      "Toaster",
+      "Wine glasses",
+      "Coffee",
+      "Crockery and cutlery",
+    ],
+  },
+  {
+    src: "/images/room-2.png",
+    alt: "Bedroom with double bed, curtains and natural lighting",
+    category: "Bedroom",
+    amenities: [
+      "Double bed",
+      "Air conditioning",
+      "Bed linen",
+      "Ceiling fan",
+      "Clothes storage",
+      "Cot",
+      "Hangers",
+      "Iron",
+      "Room-darkening blinds",
+      "Cleaning available during stay",
+      "Cleaning products",
+      "Long-term stays allowed",
+      "Private entrance",
+      "Wifi",
+    ],
+  },
+  {
+    src: "/images/room-4.png",
+    alt: "Full bathroom with mirror and glass shower enclosure",
+    category: "Full bathroom",
+    amenities: ["Bathtub", "Shower", "Hair dryer", "Toiletries", "Hot water", "Shampoo"],
+  },
+  {
+    src: "/images/gym.jpg",
+    alt: "Indoor fitness gym with cardio equipment and weights",
+    category: "Gym",
+    amenities: ["Treadmill", "Exercise bike", "Free weights", "Dumbbells", "Air conditioning"],
+  },
+  {
+    src: "/images/room-5.png",
+    alt: "Exterior view of the villa property architecture",
+    category: "Exterior",
+    amenities: ["Private patio or balcony", "Outdoor furniture", "Outdoor dining area", "Sun loungers"],
+  },
+  {
+    src: "/images/pool.jpg",
+    alt: "Courtyard outdoor swimming pool with crystal blue water",
+    category: "Pool",
+    amenities: ["Private outdoor pool", "Open all year", "Sun loungers", "Pool towels"],
+  },
+  {
+    src: "/images/additional-1.jpg",
+    alt: "Relaxing patio corner with rattan armchair and stone wall",
+    category: "Additional photos",
+    amenities: ["Corner lounge", "Indoor plants", "Accent lighting", "Rattan furniture"],
+  },
 ];
 
 export default function HeroSection() {
@@ -111,7 +200,7 @@ export default function HeroSection() {
             />
           </button>
 
-          {images.slice(1).map((image, index) => (
+          {images.slice(1, 5).map((image, index) => (
             <button
               key={image.src}
               type="button"
